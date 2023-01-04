@@ -314,3 +314,8 @@ rm carpeta_nueva
 mv carpeta_anituga.backup carpeta_nueva
 ```
 
+<br>
+
+### Configuracion de los mirrors 
+
+configuracion recomendada, en el archivo `vim /etc/pacman.d/mirrorlist` crear un backup como lo hemos hecho anteriormente, posterior agregaremos el siguiente [**mirrorlist**](configs_general/mirrorlist)
