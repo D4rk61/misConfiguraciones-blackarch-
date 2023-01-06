@@ -27,8 +27,10 @@ escencial.txt escencial.txt.backup
 
 ### Indice:
 
+#### - [Reparar los mirrors](#Terminal)
 #### - [Ajustes de Terminal](#Terminal)
 #### - [Entorno de Escritorio](#Escritorio)
+#### - [Aplicaciones Favoritas](#Aplicaciones)
 
 
 
@@ -283,6 +285,8 @@ reboot
 
 Si llega a pasar esto, se tendra que realizar de manera manual el proceso
 
+**Nota:
+No te asustes si en fondo de pantalla aparece un fondo como.. morado, solo es cuestion de cambiar el fondo de pantalla!** 
 <br>
 
 **Shorcuts para Xfce4**
@@ -316,6 +320,119 @@ mv carpeta_anituga.backup carpeta_nueva
 
 <br>
 
+# Mirrors
 ### Configuracion de los mirrors 
+_Esto es semi escencial al momento de una nueva instalacion de un sisteama basado en blackarch ya que los repos y mirrors suelen estar desactualizados_
 
 configuracion recomendada, en el archivo `vim /etc/pacman.d/mirrorlist` crear un backup como lo hemos hecho anteriormente, posterior agregaremos el siguiente [**mirrorlist**](configs_general/mirrorlist)
+
+El hacer esto nos resolvera el problema de los mirrors, ya podremos ejecutar actualizaciones y demas!!
+
+<br>
+
+### Solucion de Errores
+**Parte mas estresante...**
+
+1. Solucionar un error al actualizar el sistema por primera vez, nos dara un error de mirrors o algo asi, por lo que cree la seccion anterior, posterior a esto, **forzaremos la actualizacion** ya que el sistema es algo antiguo.
+
+Actualizaremos el sistema de la siguiente manera para ahorrar tiempo, (Aclaro que esta parte simpre me da algunos fallos asi que no estoy seguro si se solucionara todo)
+
+```bash
+sudo pacman -Syy --noconfirm && sudo pacman-key --refresh-keys && sudo pacman-key --populate archlinux && sudo pacman-key --populate blackarch 
+
+# Posterior a esto es recomendable que el sistema se reinicie
+reboot
+```
+2. Instalacion del paquete **keyring**
+Para eso dejare el siguiente video https://youtu.be/qAjDSL28ums
+Pero en un gran resumen, es pegar el siguiente comando, posterior a refrescar las claves gpg del paso 1
+
+```bash
+sudo pacman -S archlinux-keyring
+
+# Posterior a esto cerramos la terminal y volvemos a abrirla y ejecutaremos el paso 3
+```
+
+3. **Momento de la instalacion, posterior de la actualizacion de las claves gpg**
+
+```nash
+sudo pacman -Syu --overwrite='*' --noconfirm 
+```
+
+Este "refresco de las bases de datos" y la actualizacion de bases de los mirrorlist sera mas que sufciente para que nuestro blackarch este a full!
+
+Posterior, podras crear, instalar lo que tu quieras con tu sistema
+
+_Listo! Acabamos de dejar el sistema **blackarch** en total uso, puedes seguir usando esta guia para ayudarte en tu instalacion o puedes instalar lo demas a tu gusto!_
+<br>
+
+# Aplicaciones
+
+Usando yay mayormente instalaremos las aplicaciones que mas uso o las mejores aplicaciones o las mas tops (Siempre y todo esto basado en mi experiencia)
+
+
+- **Only-Office** como alternativa de office
+- **[Virtual-Box](https://denovatoanovato.net/instalar-virtualbox-en-archlinux/)** en esa pagina esta con mejor detalle la instalacion
+- **ChatGPT** esta es una aplicacion web pero igual es **demmasiado util** 
+- Como editor de texto uso **vim** posterior comenzare a usar neovim, pero mas adelante dare algunas configuraciones basicas para vim
+- **SimpleScreenSaver**
+- **Foliate** para leer libros
+- **Jupyter-Lab** para desarrolo de python y ciencia de datos
+- **Obsidian** para creacion de mi "cerebro digital" (organizacion de tareas y notas)
+- **SuperTux** para matar el tiempo jaja
+- **fguf** firewall o anti-malware
+- **terminator** para emulador de terminal jaja creo que ya quedo claro y combinacion de **tmux** y **oh-my-tmux**
+- **vscode** o code-oss para mi editor grafico 
+- **nmap y zenmap** para escaneo de mi propia pc y para ver si un sitio es seguro
+- **Stacer** para control de recrusos del pc
+- **pseint** para elaborar mis ideas para posterior codigo y **pseudo-codigo**
+- **telegram-desktop** comunizacion entre telefono y pc (linux)
+- **redshift y safe-eyes** para proteger la vista  
+
+_Mas adelante como mencione mostrare/creare un script en bash que al ejecutarlo instale todo por automatico_
+
+<br>
+
+###### Archivo de configuracion de **vim**
+Para configurar vim de la mejor manera instalando syntaxis y demas deberas de ir al siguiente archivo y si no existe se debera de crear: `~/.vimrc` 
+Y para aplicar cambios ante este se deberra de usar el comandos  `source ~/.vimrc` usar el siguiente archivo de texto
+
+```bash
+
+set clipboard=unnamedplus
+set showmode
+set autoindent
+set tabstop=4
+set expandtab
+set shiftwidth=4
+syntax on
+set number
+set cursorline
+set sw=2
+set number 
+set ruler
+set showmatch
+set mouse=a
+set numberwidth=1
+set showcmd
+set clipboard=unnamed
+set encoding=utf-8
+set background=dark
+set title
+filetype indent on
+
+```
+
+Si asi lo deseas tambien estara en la carpeta de **scripts** solo usas: `ls -la` para listar los archivos ocultos y lo mueves a la ruta dicha anteriormente `.vimrc`
+
+###### oh-my-tmux
+https://github.com/gpakosz/.tmux En este repositorio estara la configuracion para **tmux** que es una ayuda para la terminal, si no aqui los comandos necesarios para instalarlo **Nota: Esto se debe instalar tanto en el usuario normal como en el root** 
+
+```bash
+$ cd
+$ git clone https://github.com/gpakosz/.tmux.git
+$ ln -s -f .tmux/.tmux.conf
+$ cp .tmux/.tmux.conf.local .
+```
+
+Uno por uno, no todos de golpe o usar `&&` para separarlos

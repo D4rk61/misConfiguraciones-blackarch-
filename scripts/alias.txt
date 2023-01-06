@@ -1,0 +1,26 @@
+Copiar las alias y pegarlas en el archivo "rc" de tu respectiva shell por ejemplo:
+
+.zshrc
+.bashrc
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ram="watch -n 1 free -h"
+alias ls="lsd"
+alias teclado="xfce4-keyboard-settings"
+alias suspender="xfce4-session-logout --suspend"
+alias update="sudo pacman -Syy --no-confirm && sudo pacman -Syu --no-confirm"
+alias clean="sudo pacman -Scc && sudo pacman -Sc && yay -Sc && yay -Scc"
+alias notes="obsidian"
+alias t="tmux"
+alias sl="ls"
+alias c="clear"
+alias vi="vim"
+alias arbolito="git log --all --graph --decorate --oneline"
+alias start="fg" #Este alias sirve para desuspender una tarea
+alias imagen="jp2a"
+alias sudo systemctl --all="sudo systemctl list-units -t service --all"
+alias excalidraw="firefox https://excalidraw.com/"
+
+pegarlas en cualquier lugar 
