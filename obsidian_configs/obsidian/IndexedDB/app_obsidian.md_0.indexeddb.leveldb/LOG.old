@@ -1,0 +1,12 @@
+2023/01/05-22:53:36.274 73e Reusing MANIFEST /home/evildr4gon/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/05-22:53:36.275 73e Recovering log #215
+2023/01/05-22:53:36.590 73e Reusing old log /home/evildr4gon/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000215.log 
+2023/01/05-23:14:58.696 ff0 Level-0 table #220: started
+2023/01/05-23:14:58.796 ff0 Level-0 table #220: 1475953 bytes OK
+2023/01/05-23:14:58.832 ff0 Delete type=0 #215
+2023/01/05-23:16:32.685 ff1 Compacting 1@1 + 1@2 files
+2023/01/05-23:16:32.838 ff1 Generated table #221@1: 2991 keys, 568339 bytes
+2023/01/05-23:16:32.838 ff1 Compacted 1@1 + 1@2 files => 568339 bytes
+2023/01/05-23:16:32.882 ff1 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/01/05-23:16:32.883 ff1 Delete type=2 #220
+2023/01/05-23:16:32.883 ff1 Delete type=2 #217

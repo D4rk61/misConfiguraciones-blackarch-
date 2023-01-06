@@ -7,7 +7,8 @@
 
 
 **Nota:
-Es importante antes de empezar crear un backup de algunos ficheros que tocaremos/modificaremos por si algo llega a salir mal o parecido**
+1. Es importante antes de empezar crear un backup de algunos ficheros que tocaremos/modificaremos por si algo llega a salir mal o parecido
+2. descarga el archivo .md y expoxtalo a un .PDF para poder visualizar el archivo de la mejor manera
 
 Creacion de un backup:
 ```bash
@@ -436,3 +437,16 @@ $ cp .tmux/.tmux.conf.local .
 ```
 
 Uno por uno, no todos de golpe o usar `&&` para separarlos
+
+###### Extensiones y configuracion de Obsidian
+Acontinuacion dejare mis extensiones recomendadas para el uso de "obsidian" que es un editor de notas y para crear nuestro "cerebro virtual" es decir que jnos organiza nuestra vida virtual
+
+Estas son mis extensiones recomendades:
+
+![[Pasted image 20230106002016.png]]
+
+Dichas extensiones debes de buscarlas en buscador de extensiones en el mismo "obsidian". Y el tema que a mi perspectiva es el mas agradable:
+
+![[Pasted image 20230106002150.png]]
+
+En la carpeta "obsidian_configs" se encuentra la carpeta para copiarla y pegarla como hemos hecho anteriormente
