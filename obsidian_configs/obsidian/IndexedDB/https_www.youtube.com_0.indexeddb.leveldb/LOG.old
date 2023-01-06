@@ -1,7 +1,0 @@
-2022/11/27-12:45:00.307 70a4 Reusing MANIFEST /home/evildr4gon/.config/obsidian/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/11/27-12:45:00.307 70a4 Recovering log #3
-2022/11/27-12:45:00.349 70a4 Reusing old log /home/evildr4gon/.config/obsidian/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000003.log 
-2022/11/27-12:45:15.770 6a8b Level-0 table #5: started
-2022/11/27-12:45:15.814 6a8b Level-0 table #5: 25069 bytes OK
-2022/11/27-12:45:15.850 6a8b Delete type=0 #3
-2022/11/27-12:45:15.880 6a8b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
